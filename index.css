@@ -1,4 +1,19 @@
-body{
+body {
   margin: 0;
   padding: 0;
+}
+.custom-file-label::after {
+  display: none;
+}
+
+.input-wrap {
+  position: relative;
+}
+.fa {
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.input-wrap  input, .input-wrap  select {
+ text-indent: 20px;
 }
