@@ -69,9 +69,11 @@ button:focus {
   position: relative;
 }
 
-.input-wrap input,
 .input-wrap select {
-  text-indent: 25px;
+  text-indent: 15px;
+}
+.input-wrap input {
+  text-indent: 20px;
 }
 
 .btn-primary {
@@ -116,9 +118,14 @@ button:focus {
 
 }
 
-.form-control:focus {
-  border-color: rgba(214, 0, 76, .25);
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
+.form-control, .form-control::-webkit-input-placeholder, .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control:-moz-placeholder  {
+  color: rgb(168, 168, 168);
+}
+
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-position: right calc(.375em + 0.65rem) center;
 }
 
 .custom-control-input:checked~.custom-control-label::before {
@@ -131,6 +138,21 @@ input:focus~.custom-control-label::before,
 .custom-control-input:focus~.custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
 }
+
+.invalid-tooltip {
+  top: 95%;
+  padding: .1rem .2rem;
+  margin-top: 0;
+  font-size: .7rem;
+  color: rgba(226, 2, 2, 0.9);
+  background-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+
 
 /*MODAL STYLES*/
 .close {

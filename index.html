@@ -18,16 +18,20 @@
 
   <body>
 
+
+
+
     <!--JUMBOTRON-----------------------------
     -->
     <div class="jumbotron text-center">
-
       <h1 class="display-4 mb-5">Form Templates</h1>
       <p class="lead">
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reservationModal">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static"
+          data-target="#reservationModal">
           Reservation
         </button>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#applicationModal">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static"
+          data-target="#applicationModal">
           Application
         </button>
       </p>
@@ -41,7 +45,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="applicationModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="applicationModalLabel">Reservation</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal"
               data-target="#reservationModal">
               <span aria-hidden="true">&times;</span>
@@ -74,10 +78,10 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="input-wrap"> <i class="fa fa-envelope" aria-hidden="true"></i><input type="tel"
+                  <div class="input-wrap"> <i class="fa fa-envelope" aria-hidden="true"></i><input type="email"
                       class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
                     <div class="invalid-tooltip">
-                      This field is required
+                        Please enter correct format
                     </div>
                   </div>
                 </div>
@@ -163,15 +167,11 @@
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
         </div>
       </div>
     </div>
-   
-  
+
+
 
 
     <!-- Modal APPLICATION -->
@@ -180,7 +180,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="applicationModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="applicationModalLabel">Application</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal"
               data-target="#applicationModal">
               <span aria-hidden="true">&times;</span>
@@ -213,7 +213,7 @@
                     <label for="inputEmailApp">Email address</label>
                     <input type="email" class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
                     <div class="invalid-tooltip">
-                      This field is required
+                      Please enter correct format
                     </div>
                   </div>
                   <div class="form-group col-lg-6">
@@ -264,21 +264,9 @@
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous">
