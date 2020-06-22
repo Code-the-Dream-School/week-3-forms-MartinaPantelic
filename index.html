@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Forms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,16 +21,19 @@
     <!--JUMBOTRON-----------------------------
     -->
     <div class="jumbotron text-center">
-        <h1 class="display-4 mb-5">Form Templates</h1>
-        <p class="lead">
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reservationModal">
-            Reservation
-          </button>
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#applicationModal">
-            Application
-          </button>
-        </p>
-      </div>
+
+      <h1 class="display-4 mb-5">Form Templates</h1>
+      <p class="lead">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reservationModal">
+          Reservation
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#applicationModal">
+          Application
+        </button>
+      </p>
+      <div class="hero-img"></div>
+    </div>
+
 
     <!-- Modal RESERVATION -->
     <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel"
@@ -37,14 +41,127 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="reservationModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="applicationModalLabel">Modal title</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal"
               data-target="#reservationModal">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <!--RESERVATION FORM----------------------------- -->
+            <form class="needs-validation res-form" novalidate required>
+              <div class="container">
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" class="form-control" id="inputFirstNameRes" placeholder="Name" required>
+                    <div class="invalid-tooltip">
+                      Please provide First Name
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="text" class="form-control" id="inputLastNameRes" placeholder="Last Name" required>
+                    <div class="invalid-tooltip">
+                      Please provide Last Name
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrap"> <i class="fa fa-phone" aria-hidden="true"></i><input type="tel"
+                      class="form-control" id="inputPhoneRes" placeholder="Format: 1234567890" required>
+                    <div class="invalid-tooltip">
+                      Not valid phone number format
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrap"> <i class="fa fa-envelope" aria-hidden="true"></i><input type="tel"
+                      class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                </div>
+                <div class="date input-wrap form-group" data-provide="datepicker">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <input id="datepicker" class="form-control" placeholder="dd/mm/2020" required>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-6 input-wrap">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <select class="form-control" id="termin" required>
+                      <option value="">Please select</option>
+                      <option value="10:00 AM">10:00 AM</option>
+                      <option value="10:30 AM">10:30 AM</option>
+                      <option value="11:00 AM">11:00 AM</option>
+                      <option value="11:30 AM">11:30 AM</option>
+                      <option value="12:00 PM">12:00 PM</option>
+                      <option value="12:30 PM">12:30 PM</option>
+                      <option value="01:00 PM">01:00 PM</option>
+                      <option value="01:30 PM">01:30 PM</option>
+                      <option value="02:00 PM">02:00 PM</option>
+                      <option value="02:30 PM">02:30 PM</option>
+                      <option value="03:00 PM">03:00 PM</option>
+                      <option value="03:30 PM">03:30 PM</option>
+                      <option value="04:00 PM">04:00 PM</option>
+                      <option value="04:30 PM">04:30 PM</option>
+                      <option value="05:00 PM">05:00 PM</option>
+                      <option value="05:30 PM">05:30 PM</option>
+                      <option value="06:00 PM">06:00 PM</option>
+                      <option value="06:30 PM">06:30 PM</option>
+                      <option value="07:00 PM">07:00 PM</option>
+                      <option value="07:30 PM">07:30 PM</option>
+                      <option value="08:00 PM">08:00 PM</option>
+                      <option value="08:30 PM">08:30 PM</option>
+                      <option value="09:00 PM">09:00 PM</option>
+                      <option value="09:30 PM">09:30 PM</option>
+                      <option value="10:00 PM">10:00 PM</option>
+                      <option value="10:30 PM">10:30 PM</option>
+                      <option value="11:00 PM">11:00 PM</option>
+                      <option value="11:30 PM">11:30 PM</option>
+                      <option value="12:00 AM">12:00 AM</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6 input-wrap">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <select id="person-number" class="form-control" required>
+                      <option value="">Please select</option>
+                      <option value="1 Person">1 Person</option>
+                      <option value="2 Persons">2 Persons</option>
+                      <option value="3 Persons">3 Persons</option>
+                      <option value="4 Persons">4 Persons</option>
+                      <option value="5 Persons">5 Persons</option>
+                      <option value="6 Persons">6 Persons</option>
+                      <option value="7 Persons">7 Persons</option>
+                      <option value="8 Persons">8 Persons</option>
+                      <option value="9 Persons">9 Persons</option>
+                      <option value="10 Persons">10 Persons</option>
+                      <option value="11 Persons">11 Persons</option>
+                      <option value="12 Persons">12 Persons</option>
+                      <option value="13 Persons">13 Persons</option>
+                      <option value="14 Persons">14 Persons</option>
+                      <option value="15 Persons">15 Persons</option>
+                      <option value="16 Persons">16 Persons</option>
+                      <option value="17 Persons">17 Persons</option>
+                      <option value="18 Persons">18 Persons</option>
+                      <option value="19 Persons">19 Persons</option>
+                      <option value="20 Persons">20 Persons</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-primary form-group">Reserve</button>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -53,6 +170,9 @@
         </div>
       </div>
     </div>
+   
+  
+
 
     <!-- Modal APPLICATION -->
     <div class="modal fade" id="applicationModal" tabindex="-1" role="dialog" aria-labelledby="applicationModalLabel"
@@ -67,7 +187,82 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <!--APPLICATION FORM-----------------------------
+    -->
+            <form class="needs-validation app-form" novalidate required>
+              <div class="container">
+                <legend class="text-center">We are happy that you want to be part of our team</legend>
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <label for="inputFirstNameApp">Name</label>
+                    <input type="text" class="form-control" id="inputFirstNameApp" placeholder="" required>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <label for="inputLastNameApp">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastNameApp" placeholder="" required>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <label for="inputEmailApp">Email address</label>
+                    <input type="email" class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <label for="inputPhone">Phone</label>
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Format: 1234567890"
+                      pattern=".{10}" class="form-control" id="validationCustom08" oninput="check(this)" required>
+                    <div class="invalid-tooltip">
+                      Please input valid phone number
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="position">Position applied</label>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="customRadio1">Full-Time</label>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">Part-Time</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="textarea">What are your workplace skills?</label>
+                  <textarea class="form-control" id="textarea" rows="4" required></textarea>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="uploadFile" required>
+                    <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                    <label class="custom-file-label" for="uploadFile">Choose file</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -79,197 +274,12 @@
 
 
 
-    <!--RESERVATION FORM-----------------------------
-    -->
-    <form class="needs-validation res-form" novalidate required>
-      <div class="row">
-        <div class="form-group col">
-          <input type="text" class="form-control" id="inputFirstNameRes" placeholder="Name" required>
-          <div class="invalid-tooltip">
-              Please provide First Name
-            </div>
-        </div>
-        <div class="form-group col">
-          <input type="text" class="form-control" id="inputLastNameRes" placeholder="Last Name" required>
-          <div class="invalid-tooltip">
-              Please provide Last Name
-            </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="input-wrap"> <i class="fa fa-phone" aria-hidden="true"></i><input type="tel" class="form-control"
-            id="inputPhoneRes" placeholder="Format: 1234567890" required>
-            <div class="invalid-tooltip">
-                Not valid phone number format
-              </div>
-          </div> 
-      </div>
-      <div class="form-group">
-        <div class="input-wrap"> <i class="fa fa-envelope" aria-hidden="true"></i><input type="tel" class="form-control"
-            id="inputEmailApp" placeholder="name@example.com" required>
-            <div class="invalid-tooltip">
-                This field is required
-              </div>
-          </div>
-      </div>
-      <div class="date input-wrap form-group" data-provide="datepicker">
-        <i class="fa fa-calendar" aria-hidden="true"></i>
-        <input id="datepicker" class="form-control" placeholder="dd/mm/2020" required>
-        <div class="invalid-tooltip">
-            This field is required
-          </div>
-      </div>
-      <div class="row">
-        <div class="form-group col input-wrap">
-          <i class="fa fa-clock-o" aria-hidden="true"></i>
-              <select class="form-control" id="termin" required>
-                  <option value="">Please select</option>
-                  <option value="10:00 AM">10:00 AM</option>
-                  <option value="10:30 AM">10:30 AM</option>
-                  <option value="11:00 AM">11:00 AM</option>
-                  <option value="11:30 AM">11:30 AM</option>
-                  <option value="12:00 PM">12:00 PM</option>
-                  <option value="12:30 PM">12:30 PM</option>
-                  <option value="01:00 PM">01:00 PM</option>
-                  <option value="01:30 PM">01:30 PM</option>
-                  <option value="02:00 PM">02:00 PM</option>
-                  <option value="02:30 PM">02:30 PM</option>
-                  <option value="03:00 PM">03:00 PM</option>
-                  <option value="03:30 PM">03:30 PM</option>
-                  <option value="04:00 PM">04:00 PM</option>
-                  <option value="04:30 PM">04:30 PM</option>
-                  <option value="05:00 PM">05:00 PM</option>
-                  <option value="05:30 PM">05:30 PM</option>
-                  <option value="06:00 PM">06:00 PM</option>
-                  <option value="06:30 PM">06:30 PM</option>
-                  <option value="07:00 PM">07:00 PM</option>
-                  <option value="07:30 PM">07:30 PM</option>
-                  <option value="08:00 PM">08:00 PM</option>
-                  <option value="08:30 PM">08:30 PM</option>
-                  <option value="09:00 PM">09:00 PM</option>
-                  <option value="09:30 PM">09:30 PM</option>
-                  <option value="10:00 PM">10:00 PM</option>
-                  <option value="10:30 PM">10:30 PM</option>
-                  <option value="11:00 PM">11:00 PM</option>
-                  <option value="11:30 PM">11:30 PM</option>
-                  <option value="12:00 AM">12:00 AM</option>
-              </select>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-        </div>
-        <div class="form-group col input-wrap">
-          <i class="fa fa-user" aria-hidden="true"></i>
-          <select id="person-number" class="form-control" required>
-            <option value="">Please select</option>
-            <option value="1 Person">1 Person</option>
-            <option value="2 Persons">2 Persons</option>
-            <option value="3 Persons">3 Persons</option>
-            <option value="4 Persons">4 Persons</option>
-            <option value="5 Persons">5 Persons</option>
-            <option value="6 Persons">6 Persons</option>
-            <option value="7 Persons">7 Persons</option>
-            <option value="8 Persons">8 Persons</option>
-            <option value="9 Persons">9 Persons</option>
-            <option value="10 Persons">10 Persons</option>
-            <option value="11 Persons">11 Persons</option>
-            <option value="12 Persons">12 Persons</option>
-            <option value="13 Persons">13 Persons</option>
-            <option value="14 Persons">14 Persons</option>
-            <option value="15 Persons">15 Persons</option>
-            <option value="16 Persons">16 Persons</option>
-            <option value="17 Persons">17 Persons</option>
-            <option value="18 Persons">18 Persons</option>
-            <option value="19 Persons">19 Persons</option>
-            <option value="20 Persons">20 Persons</option>
-          </select>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-        </div>
-      </div>
-      </div>
-      <div class="form-group text-center">
-        <button type="submit" class="btn btn-primary form-group">Reserve</button>
-      </div>
-      </div>
-    </form>
 
 
 
 
-    <!--APPLICATION FORM-----------------------------
-    -->
-    <form class="needs-validation app-form" novalidate required>
-      <legend class="text-center">We are happy that you want to be part of our team</legend>
-      <div class="row">
-        <div class="form-group col">
-          <label for="inputFirstNameApp">Name</label>
-          <input type="text" class="form-control" id="inputFirstNameApp" placeholder="" required>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-        </div>
-        <div class="form-group col">
-          <label for="inputLastNameApp">Last Name</label>
-          <input type="text" class="form-control" id="inputLastNameApp" placeholder="" required>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group col">
-          <label for="inputEmailApp">Email address</label>
-          <input type="email" class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-        </div>
-        <div class="form-group col">
-          <label for="inputPhone">Phone</label>
-          <input type="tel" class="form-control" id="inputPhone" placeholder="Format: 1234567890" pattern=".{10}" class="form-control" id="validationCustom08" oninput="check(this)" required>
-          <div class="invalid-tooltip">
-             Please input valid phone number
-            </div>
-        </div>
-      </div>
-      <label for="position">Position applied</label>
-      <div class="custom-control custom-radio">
-        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
-        <label class="custom-control-label" for="customRadio1">Full-Time</label>
-        <div class="invalid-tooltip">
-            This field is required
-          </div>
-      </div>
-      <div class="custom-control custom-radio">
-        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-        <label class="custom-control-label" for="customRadio2">Part-Time</label>
-      </div>
-      <div class="form-group custom-control">
-        <label for="textarea">What are your workplace skills?</label>
-        <textarea class="form-control" id="textarea" rows="4" required></textarea>
-        <div class="invalid-tooltip">
-            This field is required
-          </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <button class="btn btn-outline-secondary" type="button">Button</button>
-        </div>
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" id="uploadFile" required>
-          <div class="invalid-tooltip">
-              This field is required
-            </div>
-          <label class="custom-file-label" for="uploadFile">Choose file</label>
-        </div>
-      </div>
-      <div class="form-group">
-          <button type="submit" class="btn btn-primary">Send</button>
-      </div>
-      
-    </form>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous">
     </script>
@@ -295,24 +305,23 @@
         }
       });
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
     </script>
   </body>
 
