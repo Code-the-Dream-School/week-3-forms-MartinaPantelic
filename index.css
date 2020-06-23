@@ -77,7 +77,11 @@ button:focus {
   text-indent: 20px;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:focus,
+.btn-primary:active .btn-outline-secondary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
   color: rgb(214, 0, 118);
   background-color: #fff;
   border: 2px solid #d6006b;
@@ -96,12 +100,10 @@ button:focus {
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: rgb(161, 0, 56);
-  border: 2px solid #d6006b;
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
-
+  box-shadow: none;
 }
+
+.btn-primary:not(:disabled):not(.disabled):active
 
 .btn:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
