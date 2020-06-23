@@ -72,6 +72,7 @@ button:focus {
 .input-wrap select {
   text-indent: 15px;
 }
+
 .input-wrap input {
   text-indent: 20px;
 }
@@ -118,14 +119,34 @@ button:focus {
 
 }
 
-.form-control, .form-control::-webkit-input-placeholder, .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control:-moz-placeholder  {
-  color: rgb(168, 168, 168);
+.form-control,
+.form-control::-webkit-input-placeholder,
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control:-moz-placeholder {
+  color: rgb(194, 192, 192);
 }
 
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
   background-position: right calc(.375em + 0.65rem) center;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #ced4da;
+  padding-right: calc(1.5em + .75rem);
+  background-image: none;
+}
+
+.form-control.input:-internal-autofill-selected, input:-internal-autofill-previewed  {
+  background-color: #fff!important;
+}
+
+.form-control:focus {
+  border-color: rgba(214, 0, 76, .25);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
 }
 
 .custom-control-input:checked~.custom-control-label::before {
@@ -148,10 +169,22 @@ input:focus~.custom-control-label::before,
   background-color: transparent;
 }
 
+.custom-radio .invalid-tooltip {
+  top: 180%;
+  margin-left: -25px;
+}
+
 .form-group {
   margin-bottom: 1.3rem;
 }
 
+.textarea-group {
+  position: relative;
+}
+
+.textarea-group .invalid-tooltip {
+  top: 99%;
+}
 
 
 /*MODAL STYLES*/
