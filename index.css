@@ -52,7 +52,7 @@ button:focus {
 
 .hero-img::after {
   content: '';
-  background-color: rgba(255, 0, 50, .63);
+  background-color: rgba(235, 0, 71, 0.63);
   min-height: 100vh;
   position: absolute;
   left: 0;
@@ -78,15 +78,15 @@ button:focus {
 }
 
 .btn-primary {
-  color: rgb(214, 0, 76);
+  color: rgb(214, 0, 118);
   background-color: #fff;
-  border: 2px solid #d6004c;
+  border: 2px solid #d6006b;
 
 }
 
 .btn-primary:hover,
 .btn-outline-secondary:hover {
-  color: rgb(214, 0, 76);
+  color: rgb(214, 0, 118);
   border: 2px solid #fff;
   background-color: #ffdcdc;
 }
@@ -98,8 +98,8 @@ button:focus {
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
   background-color: rgb(161, 0, 56);
-  border: 2px solid #d6004c;
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
+  border: 2px solid #d6006b;
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
 
 }
 
@@ -107,26 +107,39 @@ button:focus {
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
   outline: none;
 }
 
 .btn-outline-secondary,
 .modal-header {
   color: #fff;
-  background-color: #d6004c;
-  border: 2px solid #d6004c;
+  background-color: #d6006b;
+  border: 2px solid #d6006b;
 
 }
 
-.form-control,
-.form-control::-webkit-input-placeholder,
-.form-control::-moz-placeholder,
-.form-control:-ms-input-placeholder,
-.form-control:-moz-placeholder {
+.form-control {
   color: rgb(194, 192, 192);
 }
 
+.form-control::-webkit-input-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+
+.form-control::-moz-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+
+.form-control:-ms-input-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+.form-control:-moz-placeholder {
+  color: rgb(194, 192, 192);
+}
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
@@ -140,24 +153,27 @@ button:focus {
   background-image: none;
 }
 
-.form-control.input:-internal-autofill-selected, input:-internal-autofill-previewed  {
-  background-color: #fff!important;
+.form-control.input:-internal-autofill-selected,
+input:-internal-autofill-previewed {
+  background-color: #fff !important;
 }
 
-.form-control:focus {
-  border-color: rgba(214, 0, 76, .25);
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
+.form-control:focus,
+.custom-file-input:focus,
+.custom-file-input:focus~.custom-file-label {
+  border-color: rgba(214, 0, 118, .25);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
 }
 
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
-  border-color: #d6004c;
-  background-color: #d6004c;
+  border-color: #d6006b;
+  background-color: #d6006b;
 }
 
 input:focus~.custom-control-label::before,
 .custom-control-input:focus~.custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(214, 0, 76, .18);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
 }
 
 .invalid-tooltip {
@@ -194,5 +210,14 @@ input:focus~.custom-control-label::before,
 }
 
 .close:hover {
-  color: rgba(214, 0, 76, .18);
+  color: rgba(214, 0, 118, .18);
+}
+
+/*INPUT FILES*/
+
+
+.custom-file .btn {
+  z-index: 3;
+  min-width: max-content;
+  margin-bottom: 0;
 }
