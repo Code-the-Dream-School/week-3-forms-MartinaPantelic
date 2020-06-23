@@ -214,8 +214,16 @@ input:focus~.custom-control-label::before,
 }
 
 /*INPUT FILES*/
-
-
+.custom-file-input  {
+  cursor: pointer;
+}
+.custom-file:hover .custom-file-label {
+  border-color: rgba(214, 0, 118, .25);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
+}
+.custom-file {
+  display: flex;
+}
 .custom-file .btn {
   z-index: 3;
   min-width: max-content;
