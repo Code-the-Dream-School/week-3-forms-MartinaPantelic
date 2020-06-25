@@ -8,15 +8,22 @@ document.querySelector('.custom-file-input').addEventListener('change',function(
 
 
 // date-picker
-var dateToday = new Date();
-$("#datepicker").datepicker({
-  changeMonth: true,
-  minDate: dateToday,
-  onSelect: function (selectedDate) {
-    instance = $(this).data("datepicker"),
-      date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat,
-        selectedDate, instance.settings);
-  }
+
+
+$(function(){
+  var dtToday = new Date();
+  
+  var month = dtToday.getMonth() + 1;
+  var day = dtToday.getDate();
+  var year = dtToday.getFullYear();
+  if(month < 10)
+      month = '0' + month.toString();
+  if(day < 10)
+      day = '0' + day.toString();
+  
+  var maxDate = year + '-' + month + '-' + day;
+
+  $('#datepicker').attr('min', maxDate);
 });
 
 //forms validation
