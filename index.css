@@ -204,6 +204,25 @@ input:focus~.custom-control-label::before,
   top: 99%;
 }
 
+input[type="date"] {
+  position: relative;
+  cursor: pointer;
+  background-image: url('./icons/calendar.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 9px center;
+
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: none;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
+  margin-left: -20px;
+}
 
 /*MODAL STYLES*/
 .close {
