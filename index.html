@@ -1,16 +1,282 @@
-<DOCTYPE! HTML>
-<html >
-  <head>
-    <meta charset="utf-8">
-    <title>Forms</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href= "index.css" rel="stylesheet"></link>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+
+  <link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+  <link href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- JUMBOTRON -->
+  <div class="jumbotron text-center">
+    <h1 class="display-4 mb-5">Form Templates</h1>
+    <p class="lead">
+      <button type="button" class="btn btn-primary btn-lg mod-btn" data-toggle="modal" data-backdrop="static"
+        data-target="#reservationModal">
+        Reservation
+      </button>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static"
+        data-target="#applicationModal">
+        Application
+      </button>
+    </p>
+    <div class="hero-img"></div>
+  </div>
 
 
-    <script type="text/javascript" src="weather.js"></script>
-  </body>
+  <!-- Modal RESERVATION -->
+  <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reservationModalLabel">Reservation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+            data-target="#reservationModal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- RESERVATION FORM -->
+          <form class="needs-validation res-form" novalidate autocomplete="off">
+            <div class="container">
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <input type="text" class="form-control" id="inputFirstNameRes" placeholder="Name" required>
+                  <div class="invalid-tooltip">
+                    Please provide First Name
+                  </div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <input type="text" class="form-control" id="inputLastNameRes" placeholder="Last Name" required>
+                  <div class="invalid-tooltip">
+                    Please provide Last Name
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-wrap"> <i class="fa fa-phone" aria-hidden="true"></i><input type="tel"
+                    class="form-control" id="inputPhoneRes" placeholder="Format: 1234567890" required>
+                  <div class="invalid-tooltip">
+                    Not valid phone number format
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-wrap"> <i class="fa fa-envelope" aria-hidden="true"></i><input type="email"
+                    class="form-control" id="inputEmailRes" placeholder="name@example.com" required>
+                  <div class="invalid-tooltip">
+                    Please enter correct format
+                  </div>
+                </div>
+              </div>
+              <div class="date input-wrap form-group" data-provide="datepicker">
+                <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
+                <input type="date" id="datepicker" class="form-control" placeholder="dd/mm/2020" required>
+                <div class="invalid-tooltip">
+                  This field is required
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-lg-6 input-wrap">
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <select class="form-control time" id="termin" required>
+                    <option value="">Please select</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="01:30 PM">01:30 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="02:30 PM">02:30 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="03:30 PM">03:30 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                    <option value="04:30 PM">04:30 PM</option>
+                    <option value="05:00 PM">05:00 PM</option>
+                    <option value="05:30 PM">05:30 PM</option>
+                    <option value="06:00 PM">06:00 PM</option>
+                    <option value="06:30 PM">06:30 PM</option>
+                    <option value="07:00 PM">07:00 PM</option>
+                    <option value="07:30 PM">07:30 PM</option>
+                    <option value="08:00 PM">08:00 PM</option>
+                    <option value="08:30 PM">08:30 PM</option>
+                    <option value="09:00 PM">09:00 PM</option>
+                    <option value="09:30 PM">09:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                    <option value="10:30 PM">10:30 PM</option>
+                    <option value="11:00 PM">11:00 PM</option>
+                    <option value="11:30 PM">11:30 PM</option>
+                    <option value="12:00 AM">12:00 AM</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+                <div class="form-group col-lg-6 input-wrap">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <select id="person-number" class="form-control" required placeholder="Persons">
+                    <option value="" class="d-none">Persons</option>
+                    <option value="1 Person">1</option>
+                    <option value="2 Persons">2</option>
+                    <option value="3 Persons">3</option>
+                    <option value="4 Persons">4</option>
+                    <option value="5 Persons">5</option>
+                    <option value="6 Persons">6</option>
+                    <option value="7 Persons">7</option>
+                    <option value="8 Persons">8</option>
+                    <option value="9 Persons">9</option>
+                    <option value="10 Persons">10</option>
+                    <option value="11 Persons">11</option>
+                    <option value="12 Persons">12</option>
+                    <option value="13 Persons">13</option>
+                    <option value="14 Persons">14</option>
+                    <option value="15 Persons">15</option>
+                    <option value="16 Persons">16</option>
+                    <option value="17 Persons">17</option>
+                    <option value="18 Persons">18</option>
+                    <option value="19 Persons">19</option>
+                    <option value="20 Persons">20</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary form-group">Reserve</button>
+              </div>
+            </div>
+            <small>***All fields are required***</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal APPLICATION -->
+  <div class="modal fade" id="applicationModal" tabindex="-1" role="dialog" aria-labelledby="applicationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="applicationModalLabel">Application</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+            data-target="#applicationModal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--  APPLICATION FORM -->
+          <form class="needs-validation app-form" novalidate autocomplete="off">
+            <div class="container">
+              <h4 class="text-center">We are happy that you want to be part of our team!</h4>
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <label for="inputFirstNameApp">Name</label>
+                  <input type="text" class="form-control" id="inputFirstNameApp" placeholder="" required>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="inputLastNameApp">Last Name</label>
+                  <input type="text" class="form-control" id="inputLastNameApp" placeholder="" required>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <label for="inputEmailApp">Email address</label>
+                  <input type="email" class="form-control" id="inputEmailApp" placeholder="name@example.com" required>
+                  <div class="invalid-tooltip">
+                    Please enter correct format
+                  </div>
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="validationCustom08">Phone</label>
+                  <input type="tel" placeholder="Format: 1234567890" pattern=".{10}" class="form-control"
+                    id="validationCustom08" oninput="check(this)" required>
+                  <div class="invalid-tooltip">
+                    Please input valid phone number
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="position">Position applied</label>
+                <select class="form-control" id="position" required>
+                  <option value="">Please select</option>
+                  <option value="Front End Developer">Front End Developer</option>
+                  <option value="Back End Developer">Back End Developer</option>
+                  <option value="UI/UX Designer">UI/UX Designer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
+                  <label class="custom-control-label" for="customRadio1">Full-Time</label>
+                  <div class="invalid-tooltip">
+                    This field is required
+                  </div>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Part-Time</label>
+                </div>
+              </div>
+              <div class="form-group textarea-group">
+                <label for="textarea">What are your workplace skills?</label>
+                <textarea class="form-control" id="textarea" rows="4" required></textarea>
+                <div class="invalid-tooltip">
+                  This field is required
+                </div>
+              </div>
+              <div class="form-group">
+                <span  class="d-block mb-2">Upload you resume and let of references:</span>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input " id="myInput" aria-describedby="myInput" required>
+                  <label class="custom-file-label" for="myInput"></label>
+                  <label class="btn btn-outline-secondary" for="myInput">Choose file</label>
+                  <div class="invalid-tooltip">
+                      This field is required
+                    </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+            <small>***All fields are required***</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+  <!-- <script src="  https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" crossorigin="anonymous"> -->
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="script.js"></script>
+</body>
+
 </html>

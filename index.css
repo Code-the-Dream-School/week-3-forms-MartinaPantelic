@@ -1,4 +1,251 @@
-body{
+/*GENERAL STYLES*/
+
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:focus,
+:active,
+button:focus {
+  outline: 0;
+}
+
+.fa {
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+}
+
+.jumbotron {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.jumbotron h1,
+.lead {
+  position: relative;
+  z-index: 1;
+
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-img {
+  background-image: url(./img/back-img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.hero-img::after {
+  content: '';
+  background-color: rgba(235, 0, 71, 0.63);
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*FORM ELEMENTS*/
+.custom-file-label::after {
+  display: none;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap select {
+  text-indent: 15px;
+}
+
+.input-wrap input {
+  text-indent: 20px;
+}
+
+.btn-primary, .btn-primary:focus,
+.btn-primary:active .btn-outline-secondary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: rgb(214, 0, 118);
+  background-color: #fff;
+  border: 2px solid #d6006b;
+
+}
+
+.btn-primary:hover,
+.btn-outline-secondary:hover {
+  color: rgb(214, 0, 118);
+  border: 2px solid #fff;
+  background-color: #ffdcdc;
+}
+
+.btn-primary:focus,
+.btn-primary:active .btn-outline-secondary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active
+
+.btn:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
+  outline: none;
+}
+
+.btn-outline-secondary,
+.modal-header {
+  color: #fff;
+  background-color: #d6006b;
+  border: 2px solid #d6006b;
+
+}
+
+.form-control {
+  color: rgb(194, 192, 192);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+
+.form-control::-moz-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+
+.form-control:-ms-input-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+.form-control:-moz-placeholder {
+  color: rgb(194, 192, 192);
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-position: right calc(.375em + 0.65rem) center;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #ced4da;
+  padding-right: calc(1.5em + .75rem);
+  background-image: none;
+}
+
+.form-control.input:-internal-autofill-selected,
+input:-internal-autofill-previewed {
+  background-color: #fff !important;
+}
+
+.form-control:focus,
+.custom-file-input:focus,
+.custom-file-input:focus~.custom-file-label {
+  border-color: rgba(214, 0, 118, .25);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #d6006b;
+  background-color: #d6006b;
+}
+
+input:focus~.custom-control-label::before,
+.custom-control-input:focus~.custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
+}
+
+.invalid-tooltip {
+  top: 95%;
+  padding: .1rem .2rem;
+  margin-top: 0;
+  font-size: .7rem;
+  color: rgba(226, 2, 2, 0.9);
+  background-color: transparent;
+}
+
+.custom-radio .invalid-tooltip {
+  top: 180%;
+  margin-left: -25px;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.textarea-group {
+  position: relative;
+}
+
+.textarea-group .invalid-tooltip {
+  top: 99%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: none;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
+  margin-left: -21px;
+}
+input[type="date"], .was-validated input[type="date"].form-control:invalid,  .was-validated input[type="date"].form-control:valid{
+  position: relative;
+  cursor: pointer;
+  background-image: url('./icons/calendar.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 9px center;
+}
+
+/*MODAL STYLES*/
+.close {
+  color: #fff;
+  opacity: 1;
+}
+
+.close:hover {
+  color: rgba(214, 0, 118, .18);
+}
+
+/*INPUT FILES*/
+.custom-file-input  {
+  cursor: pointer;
+}
+.custom-file:hover .custom-file-label {
+  border-color: rgba(214, 0, 118, .25);
+  box-shadow: 0 0 0 0.2rem rgba(214, 0, 118, .18);
+}
+.custom-file {
+  display: flex;
+}
+.custom-file .btn {
+  z-index: 3;
+  min-width: max-content;
+  margin-bottom: 0;
 }
